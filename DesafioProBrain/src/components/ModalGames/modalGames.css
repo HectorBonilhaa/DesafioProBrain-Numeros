@@ -12,11 +12,10 @@
 }
 
 .modal {
-  background: #fff;
+  background: whitesmoke;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1; /* Coloca o modal acima do conteúdo anterior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 400px; /* Define a largura máxima do card */
   width: 100%;
 }
@@ -24,8 +23,8 @@
 .modal h2 {
   font-size: 20px;
   margin-bottom: 15px;
-  background-color: #fff;
-  color: #007bff;
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.815);
   font-weight: bold;
 }
 
@@ -34,21 +33,22 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: whitesmoke;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .modal button:hover {
-  background-color: #0056b3;
+  background-color: rgba(76, 75, 75, 0.815);
+
 }
 
 .close-button {
   margin-top: 10px;
   padding: 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;

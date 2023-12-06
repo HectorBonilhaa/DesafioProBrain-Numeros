@@ -13,10 +13,10 @@ const ModalGames = ({ onClose }) => {
     <div className="modal-overlay">
       <div className="modal">
         <h2>Escolha um jogo:</h2>
-        <button onClick={() => handleGameSelection("parImpar")}>Ímpar/Par</button>
+        <button onClick={() => handleGameSelection("parImpar")}>Ímpar / Par</button>
         <button onClick={() => handleGameSelection("numeroPrimo")}>Número Primo</button>
         <button onClick={() => handleGameSelection("fibonacci")}>Sequência Fibonacci</button>
-        <button onClick={() => handleGameSelection("Múltiplos de 4 Pin")}>Sequência Fibonacci</button>
+        <button onClick={() => handleGameSelection("Múltiplos de 4 Pin")}>Múltiplos 4 Pin</button>
 
         <button className="close-button" onClick={onClose}>
           Fechar
