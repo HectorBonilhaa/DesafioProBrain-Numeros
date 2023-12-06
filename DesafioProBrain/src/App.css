@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  background-color: #0009;
+  background-color: rgba(0, 0, 0, 0.815);
+  
 }
 
 .container {
@@ -21,6 +22,7 @@
 .gif {
   max-width: 100%; /* ajusta o tamanho máximo do GIF para a largura do container */
   margin-bottom: 20px; /* ajusta a margem inferior do GIF */
+  cursor: pointer;
 }
 
 .main-text {
@@ -30,4 +32,10 @@
   background-color: whitesmoke;
   font-weight: bold;
   letter-spacing: 5px;
+}
+
+.audio-btn{
+  font-size: 20px;
+  background-color: whitesmoke;
+  color: whitesmoke;
 }
