@@ -1,0 +1,53 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200rem;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.text-header{
+  font-size: 1.45rem;
+  text-align: center;
+  background-color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.gif {
+  max-width: 100%; /* ajusta o tamanho máximo do GIF para a largura do container */
+  margin-bottom: 1.25rem; /* ajusta a margem inferior do GIF */
+  cursor: pointer;
+}
+
+.mid-container{
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+}
+
+.main-text {
+  margin-top: 5px;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: whitesmoke;
+  font-weight: bold;
+  width: 100%;
+  letter-spacing: 5px;
+}
+
+
+.audio-btn{
+  width: 10%;
+  font-size: 1.35rem;
+  background-color: whitesmoke;
+  color: whitesmoke;
+  text-align: center;
+  border: none;
+
+}
