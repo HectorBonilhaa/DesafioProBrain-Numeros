@@ -1,0 +1,43 @@
+.card-number {
+  width: 20rem;
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+.card-number::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-number::-webkit-scrollbar-thumb {
+  background-color: #219ace;
+}
+
+.list-number {
+  width: 14.8rem;
+  background-color: whitesmoke;
+  list-style: none;
+  margin-right: 3px;
+  color: black;
+}
+
+#items-list {
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid black;
+}
+
+.par {
+  background-color: coral;
+  color: whitesmoke;
+}
+
+.impar {
+  background-color: cadetblue;
+  color: whitesmoke;
+}
+
+.pin {
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+  font-weight: bold;
+}
