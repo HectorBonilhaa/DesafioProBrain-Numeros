@@ -80,6 +80,7 @@ const EvenOrOdd = () => {
         <button className="audio-btn" onClick={handleToggleMute}>
           {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
         </button>
+        
         <h1>Game Par ou Ímpar</h1>
         <label htmlFor="numberInput">Digite um número (1-1000): </label>
         <input
