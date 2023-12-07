@@ -5,7 +5,7 @@ import musica from "../../assets/music/music_fibonacci.mp3";
 
 const Fibonacci = () => {
   const [numberToCheck, setNumberToCheck] = useState("");
-  const [isInFibonacci, setIsInFibonacci] = useState(null); // Alterado para null
+  const [isInFibonacci, setIsInFibonacci] = useState(null);
 
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef(null);
@@ -51,7 +51,6 @@ const Fibonacci = () => {
       return;
     }
 
-    // Armazena o valor atual do numberToCheck no ref
     lastCheckedNumberRef.current = numberToCheck;
 
     generateFibonacci();
@@ -99,7 +98,7 @@ const Fibonacci = () => {
           Verificar
         </button>
 
-        {isInFibonacci !== null && ( // Alterado para verificar se isInFibonacci não é nulo
+        {isInFibonacci !== null && (
           <p style={{ color: isInFibonacci ? "green" : "red" }}>
             O número {lastCheckedNumberRef.current}{" "}
             {isInFibonacci ? "está" : "não está"} na sequência de fibonacci
