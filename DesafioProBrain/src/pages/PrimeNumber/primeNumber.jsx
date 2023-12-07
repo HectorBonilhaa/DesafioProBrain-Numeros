@@ -42,7 +42,7 @@ const PrimeNumber = () => {
 
   const handleStartAudio = () => {
     handleToggleMute();
-    audioRef.current.volume = 0.3; // Define o volume para 50%
+    audioRef.current.volume = 0.3;
     audioRef.current.play().catch((error) => {
       console.error("Erro ao reproduzir áudio:", error);
     });
@@ -50,21 +50,17 @@ const PrimeNumber = () => {
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
-      // Verifica se o clique foi fora do cartão
       if (
         cardNumberRef.current &&
         !cardNumberRef.current.contains(event.target)
       ) {
-        // Inicia a reprodução automática do áudio quando o usuário interage fora do cartão
         handleStartAudio();
       }
     };
 
-    // Adiciona um ouvinte de clique ao documento apenas quando o componente é montado
     document.addEventListener("click", handleDocumentClick);
 
     return () => {
-      // Remove o ouvinte quando o componente for desmontado
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
