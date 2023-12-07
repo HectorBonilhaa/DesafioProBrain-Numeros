@@ -20,8 +20,8 @@
 }
 
 .gif {
-  max-width: 100%; /* ajusta o tamanho máximo do GIF para a largura do container */
-  margin-bottom: 1.25rem; /* ajusta a margem inferior do GIF */
+  max-width: 100%;
+  margin-bottom: 1.25rem;
   cursor: pointer;
 }
 

@@ -48,7 +48,6 @@ const FourPin = () => {
     setSequence(newSequence);
     setNumber("");
 
-    // Scroll para baixo caso o número seja maior que 15
     if (parseInt(number, 10) > 15 && cardNumberRef.current) {
       cardNumberRef.current.scrollTop = cardNumberRef.current.scrollHeight;
     }
