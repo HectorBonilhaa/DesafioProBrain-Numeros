@@ -21,7 +21,7 @@ const EvenOrOdd = () => {
 
   const handleStartAudio = () => {
     handleToggleMute();
-    audioRef.current.volume = 0.2; // Define o volume para 50%
+    audioRef.current.volume = 0.2;
     audioRef.current.play().catch((error) => {
       console.error("Erro ao reproduzir áudio:", error);
     });
@@ -41,7 +41,6 @@ const EvenOrOdd = () => {
 
     setResults(newResults);
 
-    // Defina a classe com base na paridade do número
     setResultClass(parity === "Par" ? "par-result" : "impar-result");
 
     setNumber("");
@@ -49,21 +48,17 @@ const EvenOrOdd = () => {
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
-      // Verifica se o clique foi fora do cartão
       if (
         cardNumberRef.current &&
         !cardNumberRef.current.contains(event.target)
       ) {
-        // Inicia a reprodução automática do áudio quando o usuário interage fora do cartão
         handleStartAudio();
       }
     };
 
-    // Adiciona um ouvinte de clique ao documento apenas quando o componente é montado
     document.addEventListener("click", handleDocumentClick);
 
     return () => {
-      // Remove o ouvinte quando o componente for desmontado
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
@@ -80,7 +75,7 @@ const EvenOrOdd = () => {
         <button className="audio-btn" onClick={handleToggleMute}>
           {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
         </button>
-        
+
         <h1>Game Par ou Ímpar</h1>
         <label htmlFor="numberInput">Digite um número (1-1000): </label>
         <input
