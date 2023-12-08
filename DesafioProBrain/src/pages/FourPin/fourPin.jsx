@@ -17,11 +17,13 @@ const FourPin = () => {
   };
 
   const handleStartAudio = () => {
-    handleToggleMute();
-    audioRef.current.volume = 0.2;
-    audioRef.current.play().catch((error) => {
+    try {
+      handleToggleMute();
+      audioRef.current.volume = 0.2;
+      audioRef.current.play();
+    } catch (error) {
       console.error("Erro ao reproduzir áudio:", error);
-    });
+    }
   };
 
   const buildSequence = () => {
@@ -93,12 +95,12 @@ const FourPin = () => {
           onChange={(e) => setNumber(e.target.value)}
           required={true}
         />
-        <button className="btn-form" onClick={buildSequence}>
+        <button className="btn-form" onClick={buildSequence} data-testid="send-form">
           Gerar Sequência
         </button>
         <ul className="list-number">
           {sequence.map((item, index) => (
-            <li id="items-list" key={index} className={item.style}>
+            <li id="items-list" key={index} className={item.style} data-testid="result-items">
               {item.value}
             </li>
           ))}

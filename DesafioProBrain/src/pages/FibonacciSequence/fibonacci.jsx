@@ -18,11 +18,13 @@ const Fibonacci = () => {
   };
 
   const handleStartAudio = () => {
-    handleToggleMute();
-    audioRef.current.volume = 0.2;
-    audioRef.current.play().catch((error) => {
+    try {
+      handleToggleMute();
+      audioRef.current.volume = 0.2;
+      audioRef.current.play();
+    } catch (error) {
       console.error("Erro ao reproduzir áudio:", error);
-    });
+    }
   };
 
   const generateFibonacci = () => {
@@ -94,12 +96,12 @@ const Fibonacci = () => {
           value={numberToCheck}
           onChange={(e) => setNumberToCheck(e.target.value)}
         />
-        <button className="btn-form" onClick={handleCheckNumber}>
+        <button className="btn-form" onClick={handleCheckNumber} data-testid="send-form">
           Verificar
         </button>
 
         {isInFibonacci !== null && (
-          <p style={{ color: isInFibonacci ? "green" : "red" }}>
+          <p data-testid="result-text" style={{ color: isInFibonacci ? "green" : "red" }}>
             O número {lastCheckedNumberRef.current}{" "}
             {isInFibonacci ? "está" : "não está"} na sequência de fibonacci
           </p>

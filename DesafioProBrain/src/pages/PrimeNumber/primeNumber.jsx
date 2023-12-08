@@ -41,11 +41,13 @@ const PrimeNumber = () => {
   };
 
   const handleStartAudio = () => {
-    handleToggleMute();
-    audioRef.current.volume = 0.3;
-    audioRef.current.play().catch((error) => {
+    try {
+      handleToggleMute();
+      audioRef.current.volume = 0.2;
+      audioRef.current.play();
+    } catch (error) {
       console.error("Erro ao reproduzir áudio:", error);
-    });
+    }
   };
 
   useEffect(() => {
@@ -88,11 +90,15 @@ const PrimeNumber = () => {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
-        <button className="btn-form" onClick={checkNumber}>
+        <button
+          className="btn-form"
+          onClick={checkNumber}
+          data-testid="send-form"
+        >
           Verificar
         </button>
         <div>
-          <p> {result}</p>
+          <p data-testid="result-text"> {result}</p>
         </div>
       </div>
     </div>

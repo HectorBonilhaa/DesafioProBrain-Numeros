@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ModalGames from "../../components/ModalGames/modalGames";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
@@ -22,14 +22,14 @@ function HomePage() {
   const handleToggleMute = () => {
     setIsMuted((prevMuted) => !prevMuted);
     audioRef.current.muted = !audioRef.current.muted;
-  };
 
-  const handleStartAudio = () => {
-    handleToggleMute();
-    audioRef.current.volume = 0.2;
-    audioRef.current.play().catch((error) => {
-      console.error("Erro ao reproduzir áudio:", error);
-    });
+    // Inicia o áudio apenas quando o usuário interagir e não estiver mutado
+    if (!isMuted) {
+      audioRef.current.volume = 0.2;
+      audioRef.current.play().catch((error) => {
+        console.error("Erro ao reproduzir áudio:", error);
+      });
+    }
   };
 
   useEffect(() => {
@@ -38,7 +38,13 @@ function HomePage() {
         containerRef.current &&
         !containerRef.current.contains(event.target)
       ) {
-        handleStartAudio();
+        // Inicia o áudio apenas quando o usuário interagir e não estiver mutado
+        if (!isMuted) {
+          audioRef.current.volume = 0.2;
+          audioRef.current.play().catch((error) => {
+            console.error("Erro ao reproduzir áudio:", error);
+          });
+        }
       }
     };
 
@@ -47,7 +53,7 @@ function HomePage() {
     return () => {
       document.removeEventListener("click", handleDocumentClick);
     };
-  }, []);
+  }, [isMuted]);
 
   return (
     <div className="container" ref={containerRef}>
@@ -56,12 +62,13 @@ function HomePage() {
         src="https://media.giphy.com/media/DebhXJUVWmyNDTt8Lv/giphy.gif"
         alt="GIF"
         className="gif"
+        id="mouse-gif"
         onClick={handleGifClick}
       />
       <div className="mid-container">
         <h1 className="main-text">Vamos Jogar um jogo?</h1>
 
-        <audio loop ref={audioRef}>
+        <audio loop ref={audioRef} data-testid="audio-element">
           <source src={musica} type="audio/mp3" />
           Seu navegador não suporta o elemento de áudio.
         </audio>
@@ -69,7 +76,9 @@ function HomePage() {
           {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
         </button>
       </div>
-      {isModalOpen && <ModalGames onClose={handleCloseModal} />}
+      <div data-testid="modal">
+        {isModalOpen && <ModalGames onClose={handleCloseModal} />}
+      </div>
     </div>
   );
 }

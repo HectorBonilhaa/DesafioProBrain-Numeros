@@ -20,11 +20,14 @@ const EvenOrOdd = () => {
   };
 
   const handleStartAudio = () => {
-    handleToggleMute();
-    audioRef.current.volume = 0.2;
-    audioRef.current.play().catch((error) => {
+    try {
+      handleToggleMute();
+      audioRef.current.volume = 0.2;
+      audioRef.current.play();
+    } catch (error) {
+      // Você pode optar por fazer algo aqui se desejar
       console.error("Erro ao reproduzir áudio:", error);
-    });
+    }
   };
 
   const checkImplementations = () => {
@@ -64,7 +67,7 @@ const EvenOrOdd = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="even-or-odd">
       <BackButton />
 
       <div className="card-number" ref={cardNumberRef}>
@@ -86,13 +89,13 @@ const EvenOrOdd = () => {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
-        <button className="btn-form" onClick={checkImplementations}>
+        <button className="btn-form" onClick={checkImplementations} data-testid="send-form">
           Verificar
         </button>
         <div>
           <p>
             Seu número é:
-            <span className={`result ${resultClass}`}>
+            <span data-testid="result-text" className={`result ${resultClass}`}>
               {" "}
               {results.evenOrOdd}
             </span>{" "}
