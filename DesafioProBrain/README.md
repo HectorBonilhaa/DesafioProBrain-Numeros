@@ -1,48 +1,46 @@
+<body>
 
-# Projeto de Desafio para Estágio em QA
-Bem-vindo ao repositório do projeto de desafio para a vaga de estágio na área de QA. Este projeto consiste na implementação de quatro jogos: Número Ímpar/Par, Número Primo, Sequência de Fibonacci e Múltiplos de 4 Pin. Utilizamos React com Vite para o desenvolvimento da aplicação, e os testes foram realizados com Jest para garantir a qualidade do código.
+   <h1>Projeto de Desafio para Estágio em QA <strong>ProBrain</strong></h1>
+    <p>Bem-vindo ao repositório do projeto de desafio para a vaga de estágio na área de QA. Este projeto consiste na implementação de quatro jogos: Número Ímpar/Par, Número Primo, Sequência de Fibonacci e Múltiplos de 4 Pin. Utilizei React com Vite para o desenvolvimento da aplicação, e os testes foram realizados com Jest para garantir a qualidade do código.</p>
 
-Jogos Implementados
-Número Ímpar/Par: Jogo simples onde o usuário deve indicar se um número é ímpar ou par.
+   <h2>Jogos Implementados</h2>
+   <ul>
+        <li><strong>Número Ímpar/Par:</strong> Jogo simples onde o usuário insere um número no input e terá a resposta se o número é Ímpar ou Par.</li>
+        <li><strong>Número Primo:</strong> Desafio para determinar se um número é primo ou não.</li>
+        <li><strong>Sequência de Fibonacci:</strong> Jogo baseado na famosa sequência de Fibonacci, onde o usuário deve insere um número e descobre se o mesmo está na sequência de Fibonacci.</li>
+        <li><strong>Múltiplos de 4 Pin:</strong> Um jogo onde o usuário insere um número e todo múltiplo de 4 vem acompanhado da palavra PIN.</li>
+    </ul>
 
-Número Primo: Desafio para determinar se um número é primo ou não.
+   <h2>Tecnologias Utilizadas</h2>
+   <p><strong>React com Vite:</strong> Utilizamos React como biblioteca principal para a construção da interface do usuário, e Vite como ferramenta de desenvolvimento rápida.</p>
+    <p><strong>HTML e CSS:</strong> As tecnologias padrão para estruturação e estilização da aplicação.</p>
 
-Sequência de Fibonacci: Jogo baseado na famosa sequência de Fibonacci, onde o usuário deve identificar o próximo número na sequência.
+   <h2>Testes</h2>
+    <p>Os testes foram realizados utilizando o framework Jest para assegurar a qualidade do código. Foram implementados testes unitários e de integração para cobrir diferentes aspectos da aplicação.</p>
+    <p>Para executar os testes, utilize o seguinte comando:</p>
+    <code>npm run test</code>
 
-Múltiplos de 4 Pin: Um jogo que testa a habilidade do usuário em identificar múltiplos de 4.
+   <h2>Relatórios</h2>
+    <p>Na pasta de relatórios, localizada na raiz do projeto, você encontrará evidências dos testes realizados, bem como relatórios de incidentes, se aplicável. Certifique-se de revisar esses documentos para obter uma compreensão completa da qualidade da aplicação.</p>
 
-Tecnologias Utilizadas
-React com Vite: Utilizamos React como biblioteca principal para a construção da interface do usuário, e Vite como ferramenta de desenvolvimento rápida.
+   <h2>Como Iniciar o Projeto</h2>
+    <ol>
+        <li>Clone o repositório:</li>
+        <code>git clone git@github.com:HectorBonilhaa/DesafioProBrain-Numeros.git</code>
+        <li>Instale as dependências:</li>
+        <code>npm install</code>
+        <li>Inicie a aplicação:</li>
+        <code>npm run dev</code>
+    </ol>
+    <p>A aplicação está disponível em:</p>
 
-HTML e CSS: As tecnologias padrão para estruturação e estilização da aplicação.
+<a href="https://desafio-pro-brain-numeros.vercel.app/" Link para deploy do projeto</a
 
-Testes
-Os testes foram realizados utilizando o framework Jest para assegurar a qualidade do código. Foram implementados testes unitários e de integração para cobrir diferentes aspectos da aplicação.
 
-Para executar os testes, utilize o seguinte comando:
 
-bash
-Copy code
-npm test
-Relatórios
-Na pasta de relatórios, localizada na raiz do projeto, você encontrará evidências dos testes realizados, bem como relatórios de incidentes, se aplicável. Certifique-se de revisar esses documentos para obter uma compreensão completa da qualidade da aplicação.
 
-Como Iniciar o Projeto
-Clone o repositório:
-bash
-Copy code
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-Instale as dependências:
-bash
-Copy code
-npm install
-Inicie a aplicação:
-bash
-Copy code
-npm start
-A aplicação estará disponível em http://localhost:3000.
+   <p>Agradeço desde já pela oportunidade!1.</p>
 
-Agradecemos por considerar este projeto como parte do processo seletivo. Se tiver alguma dúvida ou precisar de mais informações, sinta-se à vontade para entrar em contato.
+   <p>Obrigado!</p>
 
-Boa sorte!
+</body>
