@@ -19,10 +19,8 @@ describe("Home Page", () => {
       </BrowserRouter>
     );
 
-    // Localiza a imagem pelo texto alternativo e simula um clique nela
     fireEvent.click(getByAltText(/GIF/i));
 
-    // Verifica se o modal está presente no DOM após o clique na imagem
     expect(getByTestId("modal")).toBeInTheDocument();
   });
 });

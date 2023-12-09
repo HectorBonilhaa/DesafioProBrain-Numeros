@@ -36,7 +36,6 @@ describe("ModalGames Component", () => {
   });
 
   it("should render EvenOrOdd page when clicking on Ímpar / Par button", async () => {
-    // Renderize o componente ModalGames em um BrowserRouter
     render(
       <BrowserRouter>
         <ModalGames />
@@ -44,12 +43,9 @@ describe("ModalGames Component", () => {
       </BrowserRouter>
     );
 
-    // Simule o clique no botão Ímpar / Par dentro do componente ModalGames
     fireEvent.click(screen.getByText(/Ímpar \/ Par/i));
 
-    // Aguarde até que o componente EvenOrOdd seja renderizado
     await waitFor(() => {
-      // Verifique se o texto específico do EvenOrOdd está presente
       expect(screen.getByText(/Game Par ou Ímpar/i)).toBeInTheDocument();
     });
   });
