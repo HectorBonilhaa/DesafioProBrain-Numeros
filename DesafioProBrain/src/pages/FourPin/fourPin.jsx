@@ -27,7 +27,7 @@ const FourPin = () => {
   };
 
   const buildSequence = () => {
-    if (!number || isNaN(number) || number <= 0 && number >= 1000) {
+    if (!number || isNaN(number) || number <= 0 || number >= 1000) {
       alert("Por favor, insira um número válido maior que zero e menor que 1000.");
       return;
     }
